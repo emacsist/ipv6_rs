@@ -1,0 +1,27 @@
+[package]
+name = "ipv6_rs"
+version = "0.1.0"
+authors = ["emacsist <emacsist@qq.com>"]
+edition = "2018"
+
+description = "网上分享的 ipv6 地址库解析"
+keywords = ["ipv6", "ipv6wry"]
+categories = ["parsing"]
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/emacsist/ipv6_rs.git"
+exclude = [
+    "ipv6wry.db",
+]
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+lazy_static = "1.4.0"
+
+[dev-dependencies]
+criterion = "0.3"
+
+[[bench]]
+name = "my_benchmark"
+harness = false
+path = "src/benches/my_benchmark.rs"
